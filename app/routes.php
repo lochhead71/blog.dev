@@ -11,7 +11,29 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/sayhello/{name}', function($name)
 {
-	return View::make('hello');
+    if ($name == "Chris") {
+        return Redirect::to('/');
+    } else {
+        $data = array('name' => $name);
+        return View::make('my-first-view')->with($data);
+    }
+});
+
+Route::get('/resume', function()
+{
+    return "This is my resume.";
+});
+
+Route::get('/portfolio', function()
+{
+    return "This is my portfolio.";
+});
+
+Route::get('/rolldice/{guess?}', function($guess = null)
+{
+	$roll = mt_rand(1, 6);
+	$data = array('roll'=>$roll, 'guess'=>$guess);
+	return View::make('roll-dice')->with($data);
 });
