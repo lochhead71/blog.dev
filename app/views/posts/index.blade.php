@@ -17,6 +17,8 @@
 			<a href="{{{ action('PostsController@show', $post->id) }}}"><span class="badge">View post</span></a>
 			<hr>
 		@endforeach
+
+		{{ $posts->links() }}
 	</div>
 
 
