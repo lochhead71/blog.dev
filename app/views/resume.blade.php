@@ -2,10 +2,11 @@
 
 @section('top-script')
 
-  <link href="../../public/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../public/css/offcanvas.css" rel="stylesheet">
-  <link href="../../public/css/resume.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/offcanvas.css" rel="stylesheet">
+  <link href="/css/resume.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Dosis:400,600,800,200' rel='stylesheet' type='text/css'>
+  <title>jim.loch&lthead&gt | designer | coder</title>
 
 @stop
 
@@ -246,6 +247,6 @@
 
 @section('bottom-script')
 
-	<script src="../../public/js/offcanvas.js"></script>
+	<script src="/js/offcanvas.js"></script>
 
 @stop
