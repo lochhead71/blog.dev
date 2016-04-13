@@ -1,0 +1,116 @@
+body {
+	background-color: #002699;
+	font-family: 'Oswald', sans-serif;
+}
+
+.boxTitle {
+	margin-left: 100px;
+	color:#b3c6ff;
+}
+
+.toggle {
+	float: left;
+	background-color: #4d79ff;
+	padding: 4px;
+	margin-left: 12px;
+	width: 100px;
+	height: 40px;
+	border-radius: 8px;
+	border-top-color: #ccd9ff;
+	border-bottom-color: #001a66; 
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300px;
+	font-size: 1.0em;
+	color: white;
+}
+
+.lableButton {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 100px;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #4d79ff;
+	padding: 10px;
+	margin: 10px 100px;
+	border-radius: 16px;
+	border-top-color: #ccd9ff;
+	border-bottom-color: #001a66; 
+	font-weight: 300px;
+}
+
+.day {
+	color: white;
+}
+
+.coordinates {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 0px;
+}
+
+.coordinates > h2 {
+	margin-right: 20px;
+}
+
+.coordinates > label {
+	color: white;
+
+}
+
+#map-canvas {
+	width: 600px;
+	height: 320px;
+	border: 4px solid #4d79ff;
+	border-radius: 16px;
+	margin-left: 100px;
+}
+
+#submit {
+	background-color: #4d79ff;
+	padding: 4px;
+	margin-left: 12px;
+	width: 60px;
+	height: 32px;
+	border-radius: 6px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300px;
+	font-size: 0.8em;
+	color: white;
+}
+
+#submitCity {
+	background-color: #4d79ff;
+	padding: 4px;
+	margin-left: 12px;
+	width: 60px;
+	height: 32px;
+	border-radius: 6px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300px;
+	font-size: 0.8em;
+	color: white;
+}
+
+#long, #lat, #city {
+	height: 24px;
+	margin: 0px 15px;
+}
+
+#header {
+	font-family: 'Courgette', cursive;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 10px;
+}
+
+#pageTitle {
+	color: #FFF;
+}
