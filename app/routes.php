@@ -27,4 +27,18 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/resume', 'HomeController@showResume');
 
+// routes for sample front-end sites
+
+Route::get('/thump_a_trump', 'HomeController@thumpATrump');
+Route::get('/simple_simon', 'HomeController@simpleSimon');
+Route::get('/weather_map', 'HomeController@weatherMap');
+
 Route::get('/rolldice/{guess?}', 'HomeController@rollDice');
+
+// routes for posts resource
+
+Route::resource('posts', 'PostsController');
+
+
+
+

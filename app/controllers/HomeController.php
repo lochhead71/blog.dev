@@ -30,6 +30,21 @@ class HomeController extends BaseController {
 		return View::make('resume');
 	}
 
+	public function thumpATrump()
+	{
+		return View::make('thump_a_trump');
+	}
+
+	public function simpleSimon()
+	{
+		return View::make('simple_simon');
+	}
+
+	public function weatherMap()
+	{
+		return View::make('weather_map');
+	}
+
 	public function rollDice($guess = null)
 	{
 		$roll = mt_rand(1, 6);
