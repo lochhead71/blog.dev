@@ -2,6 +2,10 @@
 
 class PostsController extends \BaseController {
 
+	public function __Construct() {
+		$this->beforeFilter('auth');
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +13,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::paginate(4);
+		$posts = Post::with('user')->paginate(4);
 		return View::make('posts.index')->with('posts', $posts);
 	}
 

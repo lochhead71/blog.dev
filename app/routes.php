@@ -23,6 +23,10 @@ Route::get('/sayhello/{name}', function($name)
 
 Route::get('/', 'HomeController@showWelcome');
 
+Route::get('/login', 'UserController@showLogin');
+
+Route::post('/login', 'UserController@doLogin');
+
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/resume', 'HomeController@showResume');

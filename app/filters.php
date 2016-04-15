@@ -49,7 +49,7 @@ Route::filter('auth', function()
 });
 
 
-Route::filter('auth.basic', function()
+Route::filter('auth', function()
 {
 	return Auth::basic();
 });
