@@ -10,12 +10,12 @@
 @section('content')
 
 	<div class="wrapper">
-		<div class="panel panel-primary">
+		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Create a new entry:</h3>
+				<h3 class="panel-title">Edit entry:</h3>
 			</div>
 			<div class="panel-body">
-			  	{{ Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'class' => 'form-horizontal']) }}
+				{{ Form::model($post, ['action' => ['PostsController@update', $post->id], 'method' => 'PUT', 'class' => 'form-horizontal']) }}
 
 					@include('posts.form')
 
@@ -23,4 +23,5 @@
 			</div>
 		</div>
 	</div>
+
 @stop

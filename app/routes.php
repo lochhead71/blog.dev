@@ -39,6 +39,16 @@ Route::get('/rolldice/{guess?}', 'HomeController@rollDice');
 
 Route::resource('posts', 'PostsController');
 
+Route::get('my-posts', function() {
+
+	$user = User::find(1);
+
+	foreach($user->posts as $post) {
+		echo "Title is: $post->title" . "<br>";
+		echo "Body is: $post->body" . "<br>";
+	}
+});
+
 
 
 

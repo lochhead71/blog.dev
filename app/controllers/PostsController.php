@@ -10,7 +10,7 @@ class PostsController extends \BaseController {
 	public function index()
 	{
 		$posts = Post::paginate(4);
-		return View::make('posts.index')->with(['posts' => $posts]);
+		return View::make('posts.index')->with('posts', $posts);
 	}
 
 	/**
@@ -23,33 +23,16 @@ class PostsController extends \BaseController {
 		return View::make('posts.create');
 	}
 
-
 	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
-	{	
-	    // create the validator
-	    $validator = Validator::make(Input::all(), Post::$rules);
-
-	    // attempt validation
-	    if ($validator->fails()) {
-	        // validation failed, redirect to the post create page with validation errors and old inputs
-	        return Redirect::back()->withInput()->withErrors($validator);
-	    } else {
+	{
 		$post = new Post();
-		$post->title = Input::get('title');
-		$post->body  = Input::get('body');
-		$post->save();			
-		}
-
-
-
-		return Redirect::action('posts.index');
+		return $this->validateAndSave($post);
 	}
-
 
 	/**
 	 * Display the specified resource.
@@ -63,7 +46,6 @@ class PostsController extends \BaseController {
 		return View::make('posts.show')->with('post', $post);
 	}
 
-
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -72,9 +54,9 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		echo 'Will show a form for editing a specific post.';
+		$post = Post::find($id);
+		return View::make('posts.edit')->with('post', $post);
 	}
-
 
 	/**
 	 * Update the specified resource in storage.
@@ -84,9 +66,9 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		echo 'Will update a specific post.';
+		$post = Post::find($id);
+		return $this->validateAndSave($post);
 	}
-
 
 	/**
 	 * Remove the specified resource from storage.
@@ -96,8 +78,53 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		echo 'Will delete a specific post.';
+		$post = Post::find($id);
+
+		if(!$post) {
+			Session::flash('errorMessage', 'The post could not be deleted.');
+		}
+		$post->delete();
+	    Session::flash('successMessage', 'The post has been deleted.');
+		return Redirect::action('PostsController@index');
 	}
 
+	public function validateAndSave($post)
+	{
+	    // create the validator
+	    $validator = Validator::make(Input::all(), Post::$rules);
+
+	    // attempt validation
+	    if ($validator->fails()) {
+
+    	    // validation failed, redirect to the post create page with validation errors and old inputs
+    	    Session::flash('errorMessage', 'The form was unable to be submitted.');
+	        return Redirect::back()->withInput()->withErrors($validator);
+	    }
+
+    	if(isset($post->id))
+    	{
+    		Session::flash('successMessage', 'The post has been updated.');	
+    	} else {
+   			Session::flash('successMessage', 'The post has been created.');
+    	}
+
+		$post->title = Input::get('title');
+		$post->body  = Input::get('body');
+		// $post->user_id = Auth::id();
+		$post->user_id = User::first()->id;
+		$post->save();
+		Log::info($post);
+
+		return Redirect::action('PostsController@show', $post->id);
+	}
+
+	public function postNotFound($id)
+	{
+		$post = Post::find($id);
+		if (isnull($post)) {
+			App::abort(404);
+		}
+		return $post;
+	}
 
 }

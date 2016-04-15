@@ -4,6 +4,7 @@ class PostTableSeeder extends Seeder {
 
 	public function run()
 	{
+
 		$post = new Post();
 		$post->title = 'Hello World!';
 		$post->body = 'This is my first post utilizing the Larvel framework I\'m using to build this website. I\'ve included it in my seeder.';
