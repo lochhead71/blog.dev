@@ -1,0 +1,14 @@
+body {
+	background-color: #4C6A92;
+	padding:16px;
+}
+
+.header {
+	margin-bottom: 60px;
+}
+
+.wrapper {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 12px;
+	border-radius: 12px;
+}
