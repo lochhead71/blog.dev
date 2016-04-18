@@ -27,6 +27,8 @@ Route::get('/login', 'UserController@showLogin');
 
 Route::post('/login', 'UserController@doLogin');
 
+Route::get('/logout', 'UserController@logout');
+
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/resume', 'HomeController@showResume');

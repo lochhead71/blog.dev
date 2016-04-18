@@ -22,10 +22,13 @@
 			</div>
 		</div>
 		<a href="{{{ action('PostsController@index') }}}"><span class="badge">Back to Index</span></a>
-		<a href="{{{ action('PostsController@edit', $post->id) }}}"><span class="badge">Edit post</span></a>
-		{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
-			{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-		{{ Form::close() }}
+		@if (Auth::check())
+			<a href="{{{ action('PostsController@edit', $post->id) }}}"><span class="badge">Edit post</span></a>
+			{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
+				{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+			{{ Form::close() }}
+		@endif
+
 	</div>
 
 @stop

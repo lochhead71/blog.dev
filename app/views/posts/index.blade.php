@@ -12,6 +12,10 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-md-6">
 			<div class="wrapper">
+				@if (Auth::check())
+					<?php $loggedInUser = Auth::user(); ?>
+					<p>Welcome, {{{ $loggedInUser->first_name }}}...</p>
+				@endif
 				<h2>All the posts...</h2>
 				<hr>
 				@foreach($posts as $post)
@@ -20,13 +24,18 @@
 					</div>
 					<h4>{{{ $post->title }}}</h4>
 					<a href="{{{ action('PostsController@show', $post->id) }}}"><span class="badge">View post</span></a>
-					<a href="{{{ action('PostsController@edit', $post->id) }}}"><span class="badge">Edit post</span></a>
+					@if (Auth::check())
+						<a href="{{{ action('PostsController@edit', $post->id) }}}"><span class="badge">Edit post</span></a>
+					@endif
 					<hr>
 				@endforeach
 				<div>
 					{{ $posts->links() }}
 				</div>
-				<a class="btn btn-primary" href="{{{ action('PostsController@create') }}}">Create new post</a>
+				@if (Auth::check())
+					<a class="btn btn-primary" href="{{{ action('PostsController@create') }}}">Create new post</a>
+					<a class="btn btn-primary" href="{{{ action('UserController@logout') }}}">Log Out</a>
+				@endif
 			</div>
 		</div>
 	</div>

@@ -26,10 +26,11 @@
 
 	<div class='header'>
 		<div class="mobilenav">
+		    <li><a href="{{{ action('UserController@showLogin') }}}">Login</a></li>
 		    <li><a href="#">About Me</a></li>
 		    <li><a href="#">Resume</a></li>
 		    <li><a href="#">Portfolio</a></li>
-		    <li><a href="#">Blog</a></li>
+		    <li><a href="{{{ action('PostsController@index') }}}">Blog</a></li>
 		    <li><a href="#">Contact</a></li>
 		</div>
 	  
@@ -40,9 +41,6 @@
 		    <div class="menui bottom-menu"></div>
 		    </div>
 		</a>
-		
-		
-
 	</div>
 
    @yield('content')

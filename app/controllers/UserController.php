@@ -9,6 +9,7 @@ class UserController extends \BaseController {
 
 	public function doLogin()
 	{
+		// dd(Input::all());
 	    $validator = Validator::make(Input::all(), User::$rules);
 
 	    if ($validator->fails()) {
