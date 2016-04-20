@@ -3,7 +3,7 @@ body {
 }
 
 .wrapper{
-	width:50%;
+	width:75%;
 	padding: 16px;
 }
 
@@ -27,4 +27,8 @@ body {
 	float: right;
 	position: relative;
 	top: -30px;
+}
+
+.row {
+	margin-bottom: 8px;
 }

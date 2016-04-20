@@ -3,7 +3,8 @@
 class PostsController extends \BaseController {
 
 	public function __Construct() {
-		$this->beforeFilter('auth', array('except' => ['index', 'show']));
+		$this->beforeFilter('auth', ['except' => ['index', 'show']]);
+		$this->beforeFilter('edit', ['only' => ['edit']]);
 	}
 
 	/**
@@ -13,8 +14,18 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::with('user')->paginate(4);
-		return View::make('posts.index')->with('posts', $posts);
+		$search = Input::get('search');
+		
+		if($search == null)
+		{
+			$posts = Post::with('user')->paginate(4);
+			return View::make('posts.index')->with('posts', $posts);
+		}
+		else
+		{
+			$posts = Post::getAllLike($search);
+			return View::make('posts.index')->with('posts', $posts);
+		}
 	}
 
 	/**
@@ -112,10 +123,19 @@ class PostsController extends \BaseController {
    			Session::flash('successMessage', 'The post has been created.');
     	}
 
+		if (Input::hasFile('image'))
+		{
+		    $image = Input::file('image');
+		    $image->move(
+		    		public_path('/img/uploads'),
+		    		$image->getClientOriginalName()
+    		);
+		$post->image = "/img/uploads/{$image->getClientOriginalName()}";
+		}
 		$post->title = Input::get('title');
 		$post->body  = Input::get('body');
-		// $post->user_id = Auth::id();
-		$post->user_id = User::first()->id;
+		$post->user_id = Auth::id();
+
 		$post->save();
 		Log::info($post);
 
@@ -130,5 +150,4 @@ class PostsController extends \BaseController {
 		}
 		return $post;
 	}
-
 }

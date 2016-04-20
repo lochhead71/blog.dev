@@ -20,6 +20,16 @@ class Post extends BaseModel
 	{
 	    return $this->belongsTo('User');
 	}
+
+	public static function getAllLike($search)
+	{
+		return self::where("title", "LIKE", "%$search%")->orWhere("body", "LIKE", "%$search%")->orderBy('created_at', 'DESC')->paginate(4);
+	}
+
+	public function isAuthor(User $user)
+	{
+		return $this->user_id == $user->id;
+	}
 }
 
 ?>

@@ -53,8 +53,7 @@ Route::get('my-posts', function() {
 		echo "Title is: $post->title" . "<br>";
 		echo "Body is: $post->body" . "<br>";
 	}
+
 });
-
-
 
 

@@ -20,7 +20,7 @@ class UserController extends \BaseController {
 	    }
 
 	    if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-		    return Redirect::intended('/');
+		    return Redirect::action('PostsController@index');
 		}
 		else
 		{
@@ -34,6 +34,7 @@ class UserController extends \BaseController {
 		Auth::logout();
 		return Redirect::action('PostsController@index');
 	}
+
 }
 
  ?>

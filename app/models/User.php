@@ -9,6 +9,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	const ADMIN = 1;
+	const STANDARD = 2;
+
 	/**
 	 * The database table used by the model.
 	 *
