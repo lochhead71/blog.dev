@@ -1,0 +1,78 @@
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #4B5FAF;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #4B5FAF;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #B7C5FB;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #35437C;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+#resume h1 {
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-weight: 500;
+    color: #B7C5FB;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #4B5FAF;
+    border: 2px solid #B7C5FB;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #6C89FB;
+}
+
+.date {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #4B5FAF;
+}
+
+#wrprResume {
+/*    display: none;
+*/    margin: 16px;
+    padding: 0px 16px 16px 16px;
+    background-color: #B7C5FB;
+    border-radius: 8px;
+}

@@ -1,14 +1,4 @@
-@extends('layouts.master')
-
-@section('top-script')
-
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/posts.css">
-
-@stop
-
-@section('content')
-
+<div id="body-blog" class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-md-6">
 			<div class="wrapper">
@@ -49,6 +39,4 @@
 			</div>
 		</div>
 	</div>
-
-
-@stop
+</div>

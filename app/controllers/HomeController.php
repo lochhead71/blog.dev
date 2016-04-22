@@ -17,7 +17,8 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		$posts = Post::with('user')->paginate(4);
+			return View::make('hello')->with('posts', $posts);
 	}
 
 	public function showPortfolio()
