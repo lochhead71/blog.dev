@@ -1,4 +1,8 @@
 /* Modal Header */
+.modal {
+    overflow: scroll;
+}
+
 .modal-header {
     padding: 2px 16px;
     background-color: #4B5FAF;
@@ -63,16 +67,21 @@
     background-color: #6C89FB;
 }
 
+.btn-primary:active {
+    background-color: #5F9628;
+}
+
+.btn-primary:visited {
+    background-color: #4B5FAF;
+}
+
 .date {
     font-size: 0.75em;
     font-weight: 400;
     color: #4B5FAF;
 }
 
-#wrprResume {
-/*    display: none;
-*/    margin: 16px;
-    padding: 0px 16px 16px 16px;
-    background-color: #B7C5FB;
-    border-radius: 8px;
+.portfolio {
+    color: white;
+    font-size: 1.25em;
 }

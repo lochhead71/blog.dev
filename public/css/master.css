@@ -32,64 +32,61 @@ h3 {
 	color: white;
 }
 
+/* Header Styles */
+
 header {
 	background-color: #35437C;
+	padding: 0px;
+	height:	72px;
+	overflow: hidden;
 }
 
-.mobilenav {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 500;
-	font-size: 2.0em;
+/*#top-div {
+	padding: 0px;
+}*/
+
+#logo {
+	margin: -2px 0px -8px 0px;
+	height: 76px;
 }
 
-#header1 {
-	padding-top: 12px;
-	vertical-align: middle;
+#logo_ds {
+	margin: -8px 0px 0px -16px;
+	height: 96px;
+}
+
+#desc {
+	margin-top: 12px;
 	font-weight: 300;
-	font-size: 1.125em;
+	font-size: 1.25em;
 	color: #B7C5FB;
 }
 
-#header2 {
-	padding-top: 12px;
-	vertical-align: middle;
-	font-weight: 300;
-	font-size: 1.35em;
-	color: #B7C5FB;
-}
-
-.hdln {
-	font-weight: 300;
-	color: white;
-	text-align: center;
-}
-
-.modal-content a {
-	color:white;
-	tex-decoration: none;
-	font-size: 1.5em;
-}
+/* Section Divs */
 
 #hdln-aboutMe,
 #body-resume,
 #body-portfolio,
-#body-blog,
+#post-index,
 #body-contact {
 	display: none;
 }
 
-#body-portfolio h4 {
-	margin-bottom: 18px;
+.hdln {
+	font-weight: 300;
+	font-size: 1.75em;
+	margin: 6px 0px;
 	color: white;
-	font-weight: 300px;
+	text-align: center;
 }
 
 #hdln-aboutMe, #body-aboutMe {
 	background-color: #AD3C1A;
+	padding: 8px;
 }
 
 #body-aboutMe {
-	padding-left: 0px;
+	padding: 0px;
 }
 #body-aboutMe h2 {
 	font-weight: 300;
@@ -109,7 +106,7 @@ header {
 #body-resume {
 	display: none;
 	background-color: #6C89FB;
-	padding: 8px 16px 8px 0px;
+	padding: 8px;
 }
 
 #hdln-portfolio {
@@ -124,15 +121,20 @@ header {
 	text-align: center;
 }
 
+#body-portfolio h4 {
+	margin-bottom: 18px;
+	color: white;
+	font-weight: 300px;
+}
+
 #hdln-blog {
 	background-color: #E25A31;
 	padding: 8px;
 }
 
-#body-blog {
-	display: none;
+#post-index {
 	background-color: #E25A31;
-	padding: 8px 16px 8px 16px;
+	padding: 8px;
 }
 
 #body-contact {
@@ -151,6 +153,25 @@ header {
 	font-size: 3.5em;
 }
 
+/* Additional universal styles */
+
+.wrapper {
+    margin: 0px 12px 8px 8px;
+    padding: 8px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 12px;
+}
+
+.badge {
+	background-color: #4B5FAF;
+}
+
+.fa-port {
+	font-size: 6.0em;
+	position: relative;
+	top: 120px;
+}
+
 /*Default values for XS media queries*/
 #logo {display:none;}
 #logo_ds {display:block;}
@@ -160,8 +181,6 @@ header {
 #hd_sl {display:none;}
 #me_hdln, #me_hr {margin-left: 16px;}
 #me_desc {margin: 16px; font-weight: 300; color: white;}
-#header1 {display: block;}
-#header2 {display:none;}
 
 
 /*Small devices (landscape phones, 34em and up)*/

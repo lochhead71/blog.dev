@@ -20,7 +20,7 @@ class UserController extends \BaseController {
 	    }
 
 	    if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-		    return Redirect::action('PostsController@index');
+		    return Redirect::action('HomeController@showWelcome');
 		}
 		else
 		{

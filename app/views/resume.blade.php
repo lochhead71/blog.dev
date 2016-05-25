@@ -1,5 +1,5 @@
 <div id="body-resume" class="container-fluid">
-   <div id="wrprResume">
+   <div class="wrapper">
       <div class="row">
          <div class="col-xs-12 col-sm-6">
             <h3>San Antonio Business Journal</h3>
@@ -29,7 +29,7 @@
                      <p>Served as production liaison to web offset printer in Dallas, as well as local contact for information technology services from corporate headquarters.</p>
                   </div>
                   <div class="modal-footer">
-                     <a href="/img/JRL_SABJ_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
+                     <a class="portfolio" href="/img/JRL_SABJ_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
                   </div>
                </div> <!-- END Modal content -->
             </div> <!-- END First Modal -->
@@ -55,7 +55,7 @@
                      <p>Sole graphic designer in editorial department responsible for assembling and laying out weekly newspaper including selecting and optimizing photographs, designing maps, graphs and other informational graphics, designing feature pages, and conceiving graphical themes for special projects. Worked with management in transition during hardware and software upgrades and redesign process. Worked with managing editor to develop and refine quantitative tools measuring progress in achieving content goals. Created template from scratch in Adobe InDesign and coordinated transition from Quark and NewsEdit Pro to the Adobe workflow including InCopy. Highly intensive environment requiring excellent time-management skills and efficient methodology.</p>
                   </div>
                   <div class="modal-footer">
-                     <a href="/img/JRL_ABJ_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
+                     <a class="portfolio" href="/img/JRL_ABJ_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
                   </div>
                </div> <!-- END Modal content -->
             </div> <!-- END Second Modal -->
@@ -83,7 +83,7 @@
                      <p>Served as sole Graphic Designer for statewide trade association, working with multiple departments with conflicting deadlines. Responsible for managing the design and production of dozens of brochures monthly and collaborated with Communications Director and President to evaluate the branding of the association. Designed the cover, in-house ads and occasional features for a full-color monthly magazine. Coordinated with an in-house print shop to produce 2 and 3 spot-color pieces, and collected bids and served as liaison with outside service providers for 4-color process work. Designed PowerPoint presentations for statewide convention and advocacy tours. Researched and made recommendations for equipment purchase, and served as in-house photographer for publication in monthly magazine.</p>
                   </div>
                   <div class="modal-footer">
-                     <a href="/img/JRL_TBA_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
+                     <a class="portfolio" href="/img/JRL_TBA_portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Portfolio</a>
                   </div>
                </div> <!-- END Modal content -->
             </div> <!-- END Third Modal -->

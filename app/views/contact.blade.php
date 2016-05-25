@@ -5,4 +5,7 @@
 		<a href="http://github.com/lochhead71" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 		<a href="http://twitter.com/lochhead_james" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 	</div>
+	<div>
+		<a href="{{{ action('UserController@showLogin') }}}"><span class="badge">Log In</span></a>
+	</div>
 </div>

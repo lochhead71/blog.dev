@@ -1,6 +1,6 @@
-<div id="body-blog" class="container-fluid">
+<div id="post-index" class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-md-6">
+		<div class="col-xs-12 col-md-6">
 			<div class="wrapper">
 				@if (Auth::check())
 					<?php $loggedInUser = Auth::user(); ?>
@@ -13,7 +13,7 @@
 						<p>Written {{{ $post->created_at->diffForHumans() . " by " . $post->user->first_name }}}</p>
 					</div>
 					<h4>{{{ $post->title }}}</h4>
-					<a href="{{{ action('PostsController@show', $post->id) }}}"><span class="badge">View post</span></a>
+					<a class="post-view" data-id="{{{ $post->id }}}" href="{{{ action('PostsController@show', $post->id) }}}"><span class="badge">View post</span></a>
 					@if (Auth::check() && $post->isAuthor(Auth::user()))
 							<a href="{{{ action('PostsController@edit', $post->id) }}}"><span class="badge">Edit post</span></a>
 					@endif
@@ -24,10 +24,10 @@
 				</div>
 				<div class='row'>
 					{{ Form::open(array('action' => 'PostsController@index', 'method' => 'GET',)) }}
-					<div class='col-xs-12 col-sm-8'>
+					<div class='col-xs-8'>
 						{{ Form::text('search', null, array('placeholder'=>'Search blog by keyword', 'class' => 'form-control')) }}
 					</div>
-					<div class='col-xs-12 col-sm-4'>
+					<div class='col-xs-4'>
 						{{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
 					</div>
 					{{ Form::close() }}
@@ -39,4 +39,7 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div id="post-show">
 </div>

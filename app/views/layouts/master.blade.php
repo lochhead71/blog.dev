@@ -26,19 +26,14 @@
 	@if (Session::has('errorMessage'))
 		<div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
 	@endif
-	<header>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-7 col-sm-8 col-md-8 col-lg-8">
-					<img src="/img/jrl_logo.svg" alt="" id="logo">
-					<img src="/img/jrl_logo_ds.svg" alt="" id="logo_ds">
-				</div>
-				<div id="header1" class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-					<p>Designer | Developer</p>
-				</div>
-				<div id="header2" class="col-md-3 col-lg-3">
-					<p>Graphic Designer<br>Web Developer</p>
-				</div>
+	<header class="container-fluid">
+		<div id="top-div" class="row">
+			<div class="col-xs-6 col-sm-9">
+				<img src="/img/jrl_logo.svg" alt="" id="logo">
+				<img src="/img/jrl_logo_ds.svg" alt="" id="logo_ds">
+			</div>
+			<div class="col-xs-6  col-sm-3">
+				<p id="desc">Graphic Designer<br>Web Developer</p>
 			</div>
 		</div>
 	</header>
@@ -51,6 +46,9 @@
 	<script src='/js/bootstrap.min.js'></script>
 	<script src='/js/master.js'></script>
 	<script src='/js/resume.js'></script>
+	<script src="/js/portfolio.js"></script>
+	<script src="/js/posts.js"></script>
+
 
 	{{-- unique JS inclusions for view --}}
 	@yield('bottom-script')

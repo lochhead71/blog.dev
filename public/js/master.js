@@ -15,7 +15,7 @@ $(document).ready(function() {
 		$('#body-aboutMe').slideDown();
 		$('#body-resume').slideUp();
 		$('#body-portfolio').slideUp();
-		$('#body-blog').slideUp();
+		$('#post-index').slideUp();
 		$('#body-contact').slideUp();
 	});
 	$('#hdln-resume').click(function() {
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		$('#body-aboutMe').slideUp();
 		$('#body-resume').slideDown();
 		$('#body-portfolio').slideUp();
-		$('#body-blog').slideUp();
+		$('#post-index').slideUp();
 		$('#body-contact').slideUp();
 	});
 	$('#hdln-portfolio').click(function() {
@@ -31,7 +31,7 @@ $(document).ready(function() {
 		$('#body-aboutMe').slideUp();
 		$('#body-resume').slideUp();
 		$('#body-portfolio').slideDown();
-		$('#body-blog').slideUp();
+		$('#post-index').slideUp();
 		$('#body-contact').slideUp();
 	});
 	$('#hdln-blog').click(function() {
@@ -39,15 +39,15 @@ $(document).ready(function() {
 		$('#body-aboutMe').slideUp();
 		$('#body-resume').slideUp();
 		$('#body-portfolio').slideUp();
-		$('#body-blog').slideDown();
-		$('#body-contact').slideup();
+		$('#post-index').slideDown();
+		$('#body-contact').slideUp();
 	});
 	$('#hdln-contact').click(function() {
 		$('#hdln-aboutMe').slideDown();
 		$('#body-aboutMe').slideUp();
 		$('#body-resume').slideUp();
 		$('#body-portfolio').slideUp();
-		$('#body-blog').slideUp();
+		$('#post-index').slideUp();
 		$('#body-contact').slideDown();
 	});
 

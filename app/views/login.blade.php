@@ -1,12 +1,5 @@
 @extends('layouts.master')
 
-@section('top-script')
-
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/posts.css">
-
-@stop
-
 @section('content')
 
 	<div class="wrapper">
