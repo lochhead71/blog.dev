@@ -21,16 +21,6 @@ class HomeController extends BaseController {
 			return View::make('hello')->with('posts', $posts);
 	}
 
-	public function showPortfolio()
-	{
-		return View::make('portfolio');
-	}
-
-	public function showResume()
-	{
-		return View::make('resume');
-	}
-
 	public function thumpATrump()
 	{
 		return View::make('thump_a_trump');

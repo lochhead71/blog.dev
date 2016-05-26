@@ -138,7 +138,7 @@ class PostsController extends \BaseController {
 		$post->save();
 		Log::info($post);
 
-		return Redirect::action('PostsController@show', $post->id);
+		return Redirect::action('HomeController@showWelcome');
 	}
 
 	public function postNotFound($id)

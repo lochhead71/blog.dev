@@ -41,10 +41,6 @@ header {
 	overflow: hidden;
 }
 
-/*#top-div {
-	padding: 0px;
-}*/
-
 #logo {
 	margin: -2px 0px -8px 0px;
 	height: 76px;
@@ -80,22 +76,20 @@ header {
 	text-align: center;
 }
 
-#hdln-aboutMe, #body-aboutMe {
+#hdln-aboutMe {
 	background-color: #AD3C1A;
 	padding: 8px;
 }
 
 #body-aboutMe {
-	padding: 0px;
+	background-color: #AD3C1A;
+	padding: 0px 16px 0px 0px;
 }
+
 #body-aboutMe h2 {
 	font-weight: 300;
 	color: white;
 	text-align: center;
-}
-
-#body-aboutMe li {
-	margin-bottom: 8px;
 }
 
 #hdln-resume {
@@ -119,6 +113,20 @@ header {
 	background-color: #34590F;
 	padding: 8px 16px 8px 16px;
 	text-align: center;
+}
+
+#prt_witte,
+#prt_simon,
+#prt_weather,
+#prt_trump {
+	display: none;
+}
+
+#prt_witte-768,
+#prt_simon-768,
+#prt_weather-768,
+#prt_trump-768 {
+	display: block;
 }
 
 #body-portfolio h4 {
@@ -167,21 +175,25 @@ header {
 }
 
 .fa-port {
-	font-size: 6.0em;
 	position: relative;
 	top: 120px;
+}
+
+.ltBlue {
+	background-color: #B7C5FB;
 }
 
 /*Default values for XS media queries*/
 #logo {display:none;}
 #logo_ds {display:block;}
-#jrlPhoto1 {display:block;}
+#body-aboutMe.row { padding: 0px; margin-bottom: 0px; }
+#jrlPhoto { padding: 0px; margin: 0px; overflow: hidden; }
+#jrlPhoto1 {display:inline-block; position: relative;}
 #jrlPhoto2 {display:none;}
 #jrlPhoto3 {display:none;}
 #hd_sl {display:none;}
 #me_hdln, #me_hr {margin-left: 16px;}
 #me_desc {margin: 16px; font-weight: 300; color: white;}
-
 
 /*Small devices (landscape phones, 34em and up)*/
 @media (min-width: 34em) {
@@ -218,7 +230,7 @@ header {
 	#logo {display:block;}
 	#logo_ds {display:none;}
 	#jrlPhoto1 {display:none;}
-	#jrlPhoto2 {display:block;}
+	#jrlPhoto2 {display:block; margin-bottom: -16px;}
 	#jrlPhoto3 {display:none;}
 	#header1 {display: none;}
 	#header2 {display:block;}
@@ -240,7 +252,21 @@ header {
 	    -webkit-column-rule: 1px solid #E25A31; /* Chrome, Safari, Opera */
 	    -moz-column-rule: 1px solid #E25A31; /* Firefox */
 	    column-rule: 1px solid #E25A31;
-	}	
+	}
+
+	#prt_witte,
+	#prt_simon,
+	#prt_weather,
+	#prt_trump {
+		display: block;
+	}
+
+	#prt_witte-768,
+	#prt_simon-768,
+	#prt_weather-768,
+	#prt_trump-768 {
+		display: none;
+	}
 }
 
 /*Large devices (desktops, 62em and up)*/
@@ -252,8 +278,11 @@ header {
 	#jrlPhoto3 {display:block;}
 	#header1 {display: none;}
 	#header2 {display:block;}
+	.hdln { font-size: 3.0em; }
 
-	#me_hdln {margin: 16px 16px 16px -132px;}
+	#body-aboutMe { padding-right: 64px; }
+
+	#me_hdln {margin: 16px 32px 16px -148px;}
 
 	#me_hr {margin-left: -132px;}
 

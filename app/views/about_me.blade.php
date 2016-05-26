@@ -1,6 +1,6 @@
 <div id="body-aboutMe" class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6">
+		<div id="jrlPhoto" class="col-xs-12 col-sm-6">
 			<img id="jrlPhoto1" src="/img/jlochhead_768.png" alt="">
 			<img id="jrlPhoto2" src="/img/jlochhead.png" alt="">
 			<img id="jrlPhoto3" src="/img/jlochhead_360.png" alt="">
