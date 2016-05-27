@@ -19,6 +19,7 @@
 
 	<div id="hdln-blog" class="container-fluid">
 		<h2 class="hdln">Blog</h2>
+		<input type="hidden" name="save" id="save" value="{{{  }}}">
 	</div>
 	@include('posts.index')
 

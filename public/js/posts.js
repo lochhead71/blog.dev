@@ -2,7 +2,6 @@ $(document).ready(function(){
 	var $link = $('.post-view');
 	$link.on('click', function(e){
 		e.preventDefault();
-		// console.log($(this).data('id'));
 		$id = $(this).data('id');
 		$('#post-index').slideUp(500, function(){
 			$.get('/posts/' + $id, function(html){

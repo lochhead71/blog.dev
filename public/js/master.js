@@ -55,4 +55,18 @@ $(document).ready(function() {
 
 	$('.carousel').carousel();
 
+	// redirect to blog index after save and validate
+
+	$()
+
+
+		$('#hdln-blog').click(function() {
+		$('#hdln-aboutMe').slideDown();
+		$('#body-aboutMe').slideUp();
+		$('#body-resume').slideUp();
+		$('#body-portfolio').slideUp();
+		$('#post-index').slideDown();
+		$('#body-contact').slideUp();
+	});
+
 }());
