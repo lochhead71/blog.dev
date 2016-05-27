@@ -2,16 +2,17 @@ $(document).ready(function(){
 	var $link = $('.post-view');
 	$link.on('click', function(e){
 		e.preventDefault();
-
+		// console.log($(this).data('id'));
+		$id = $(this).data('id');
 		$('#post-index').slideUp(500, function(){
-			$.get('/posts/' + $link.data('id'), function(html){
+			$.get('/posts/' + $id, function(html){
 				$('#post-show').html(html);
 				$('#post-show').slideDown(200);
 			});
 		});
 	});
 
-	$('#post-show').on('click', '#post-back', function(e){console.log($('#post-back').get(0));
+	$('#post-show').on('click', '#post-back', function(e){
 		e.preventDefault();
 		$('#post-show').slideUp(500, function(){
 			$('#post-index').slideDown(500)

@@ -99,7 +99,7 @@ class PostsController extends \BaseController {
 		}
 		$post->delete();
 	    Session::flash('successMessage', 'The post has been deleted.');
-		return Redirect::action('PostsController@index');
+		return Redirect::action('HomeController@showWelcome');
 	}
 
 	public function validateAndSave($post)
@@ -138,7 +138,7 @@ class PostsController extends \BaseController {
 		$post->save();
 		Log::info($post);
 
-		return Redirect::action('HomeController@showWelcome');
+		return Redirect::action('HomeController@showWelcome', '$save');
 	}
 
 	public function postNotFound($id)
