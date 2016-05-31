@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/master.css">
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,700,500' rel='stylesheet' type='text/css'>
+	<script src="https://use.fontawesome.com/ba8c8fa918.js"></script>
 
 	{{-- unique CSS inclusions for view --}}
 	@yield('top-script')
