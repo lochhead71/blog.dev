@@ -10,8 +10,8 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <a id="prt_witte" href="http://wittetour.org/" target="_blank"><img src="/img/prt_Witte.png" alt="" /></a>
-      <a id="prt_witte-768" href="http://wittetour.org/" target="_blank"><img src="/img/prt_Witte-768.png" alt="" /></a>
+      <a id="prt_witte" href="http://wittetour.org/" target="_blank"><img src="/img/prt_witte.png" alt="" /></a>
+      <a id="prt_witte-768" href="http://wittetour.org/" target="_blank"><img src="/img/prt_witte-768.png" alt="" /></a>
       <div class="carousel-caption">
         <h3>Witte Museum Audio Tour</h3>
         <p>Mobile-responsive design utilizing HTML5, CSS3 and JQuery, and custom CMS utlizing Laravel framework and MySQL.</p>
